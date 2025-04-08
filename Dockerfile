@@ -21,7 +21,11 @@ USER jovyan
 
 # RUN conda install -y scikit-learn
 # Additional packages
-RUN pip install pytorch-metric-learning faiss-cpu
+RUN pip install \
+    # Superpoint requirements \
+    tensorboardX tensorflow-addons torchgeometry \
+    # Rest of the notebook in HW1
+    pytorch-metric-learning faiss-cpu 
 
 
 # Override command to disable running jupyter notebook at launch
