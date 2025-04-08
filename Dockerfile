@@ -20,6 +20,8 @@ RUN pip install --no-cache-dir networkx scipy
 USER jovyan
 
 # RUN conda install -y scikit-learn
+# Additional packages
+RUN pip install pytorch-metric-learning faiss-cpu
 
 
 # Override command to disable running jupyter notebook at launch
