@@ -24,6 +24,7 @@ USER jovyan
 RUN pip install \
     # Superpoint requirements \
     tensorboardX tensorflow-addons torchgeometry \
+    coloredlogs \
     # Rest of the notebook in HW1
     pytorch-metric-learning faiss-cpu 
 
