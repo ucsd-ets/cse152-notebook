@@ -19,8 +19,8 @@ RUN pip install --no-cache-dir networkx scipy
 # 3) install packages using notebook user
 USER jovyan
 
-# RUN conda install -y scikit-learn
 # Additional packages
+# HW1 packages
 RUN pip install \
     # Superpoint requirements \
     tensorboardX tensorflow-addons torchgeometry \
@@ -28,6 +28,8 @@ RUN pip install \
     # Rest of the notebook in HW1
     pytorch-metric-learning faiss-cpu 
 
+# HW2 packages
+RUN conda install -y swig
 
 # Override command to disable running jupyter notebook at launch
 # CMD ["/bin/bash"]
